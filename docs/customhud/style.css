@@ -74,7 +74,6 @@ table {
 
 thead {
     border: solid 2px green;
-    background-color: #bbb;
     position: -webkit-sticky;
     position: sticky;
     top: 40px; /*90*/
@@ -95,8 +94,8 @@ td {
     padding: 8px;
 }
 
-tr:nth-child(even) { background-color: #e0e0e0; }
-tr:nth-child(odd) { background-color: #f4f5f7; }
+tr:nth-child(even) td{ background-color: #e0e0e0; }
+tr:nth-child(odd) td{ background-color: #f4f5f7; }
 th:last-child, td:last-child { border-right: none; }
 .rowspan_fix_right { border-right: 2px solid !important; }
 tr:last-child td, .rowspan { border-bottom: none; }
