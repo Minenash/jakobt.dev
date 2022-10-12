@@ -130,3 +130,121 @@ tr:last-child td:first-child { border-radius: 0 0 0 10px; }
     margin: 0 8px;
     padding: 2px;
 }
+
+rect {
+    fill: white;
+    fill-opacity: 0;
+    stroke: red;
+    stroke-width: 3;
+}
+
+
+text {
+    display: none;
+    font-weight: bold;
+    font-size: 36px;
+}
+#r1v1:hover ~ #r1v1-test,
+#r1v2:hover ~ #r1v2-test,
+#r1v3:hover ~ #r1v3-test,
+
+#r2v1:hover ~ #r2v1-test,
+#r2v2:hover ~ #r2v2-test,
+#r2v3:hover ~ #r2v3-test,
+#r2v4:hover ~ #r2v4-test,
+#r2v5:hover ~ #r2v5-test,
+#r2v6:hover ~ #r2v6-test,
+#r2v7:hover ~ #r2v7-test,
+
+#r3v1:hover ~ #r3v1-test,
+#r3v2:hover ~ #r3v2-test,
+#r3v3:hover ~ #r3v3-test,
+
+#r4v1:hover ~ #r4v1-test,
+#r4v2:hover ~ #r4v2-test,
+#r4v3:hover ~ #r4v3-test,
+#r4v4:hover ~ #r4v4-test,
+#r4v5:hover ~ #r4v5-test,
+#r4v6:hover ~ #r4v6-test,
+
+#r5v1:hover ~ #r5v1-test,
+#r5v2:hover ~ #r5v2-test,
+
+#r6v1:hover ~ #r6v1-test,
+#r6v2:hover ~ #r6v2-test,
+
+#r9v1:hover ~ #r9v1-test,
+#r9v2:hover ~ #r9v2-test,
+#r9v3:hover ~ #r9v3-test,
+#r9v4:hover ~ #r9v4-test,
+#r9v5:hover ~ #r9v5-test,
+#r9v6:hover ~ #r9v6-test,
+
+#r10v1:hover ~ #r10v1-test,
+
+#r11v1:hover ~ #r11v1-test,
+#r11v2:hover ~ #r11v2-test,
+
+#r12v1:hover ~ #r12v1-test,
+#r12v2:hover ~ #r12v2-test,
+#r12v3:hover ~ #r12v3-test,
+
+#r13v1:hover ~ #r13v1-test,
+#r13v2:hover ~ #r13v2-test,
+#r13v3:hover ~ #r13v3-test,
+
+#r14v1:hover ~ #r14v1-test,
+#r14v2:hover ~ #r14v2-test,
+#r14v3:hover ~ #r14v3-test,
+
+#r15v1:hover ~ #r15v1-test,
+#r15v2:hover ~ #r15v2-test,
+
+#r16v1:hover ~ #r16v1-test,
+#r16v2:hover ~ #r16v2-test,
+#r16v3:hover ~ #r16v3-test,
+#r16v4:hover ~ #r16v4-test,
+
+#r17v1:hover ~ #r17v1-test,
+
+#r18v1:hover ~ #r18v1-test,
+#r18v2:hover ~ #r18v2-test,
+
+#r21v1:hover ~ #r21v1-test,
+#r21v2:hover ~ #r21v2-test,
+#r21v3:hover ~ #r21v3-test,
+#r21v4:hover ~ #r21v4-test,
+#r21v5:hover ~ #r21v5-test,
+#r21v6:hover ~ #r21v6-test,
+#r21v7:hover ~ #r21v7-test,
+#r21v8:hover ~ #r21v8-test,
+#r21v9:hover ~ #r21v9-test,
+
+#r22v1:hover ~ #r22v1-test,
+#r22v2:hover ~ #r22v2-test,
+#r22v3:hover ~ #r22v3-test,
+
+#rs_r1v1:hover ~ #rs_r1v1-test,
+#rs_r1v2:hover ~ #rs_r1v2-test,
+
+#rs_r2v1:hover ~ #rs_r2v1-test,
+#rs_r2v2:hover ~ #rs_r2v2-test,
+#rs_r2v3:hover ~ #rs_r2v3-test,
+
+#rs_r3v1:hover ~ #rs_r3v1-test,
+#rs_r3v2:hover ~ #rs_r3v2-test,
+
+#rs_r4v1:hover ~ #rs_r4v1-test,
+
+#rs_r5v1:hover ~ #rs_r5v1-test,
+
+#rs_r6v1:hover ~ #rs_r6v1-test,
+
+#rs_r7v1:hover ~ #rs_r7v1-test,
+#rs_r7v2:hover ~ #rs_r7v2-test,
+
+#rs_r8v1:hover ~ #rs_r8v1-test,
+#rs_r8v2:hover ~ #rs_r8v2-test
+{
+    display: block;
+}
