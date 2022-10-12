@@ -17,8 +17,7 @@ h3 {
   margin-bottom:1rem
 }
 .main-section {
-  padding:1.5rem;
-  padding-top:2rem;
+  padding: 2rem 1.5rem 1.5rem;
   max-width:24rem;
   width:100%;
   display:flex !important;

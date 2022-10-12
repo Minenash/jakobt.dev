@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8>
+    <title>Jákob - Kuddelmuddel</title>
+    <meta content="width=device-width,initial-scale=1,user-scalable=no"name=viewport>
+    <meta content="The Home of Terrible Projects"name=description>
+<!--    <link rel="icon" type="image/png" href="favicon_92x.png"/>-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>html {background-color:#f4f5f7} body {display:none}</style>
+</head>
+<body>
+
+<ul style="position: sticky; top: 0; z-index: 1;">
+    <li><a class="logo"><b>CustomHud Docs</b></a></li>
+    <li><a href="">Getting Started</a></li>
+    <li><a href="" class="active">Variables</a></li>
+    <li><a href="">Conditionals</a></li>
+    <li><a href="">About</a></li>
+</ul>
+<h3></h3>
+
+<ul class="inner_nav">
+    <li><a href="#misc">Misc</a></li>
+    <li><a href="#position">Position</a></li>
+    <li><a href="#direction">Direction</a></li>
+    <li><a href="#velocity">Velocity</a></li>
+    <li><a href="#biome_and_dimension">Biome & Dimension</a></li>
+    <li><a href="#particles_and_entities">Particles and Entities</a></li>
+    <li><a href="#day_and_time">Day and Time</a></li>
+    <li><a href="#difficulty_and_light_levels">Difficulty and Light Levels</a></li>
+    <li><a href="#chunks">Chunks</a></li>
+    <li><a href="#sounds">Sounds</a></li>
+    <li><a href="#targets">Targets</a></li>
+    <li><a href="#items">Items</a></li>
+    <li><a href="#pc_utilization">PC Utilization</a></li>
+    <li><a href="#pc_info">PC Info</a></li>
+    <li><a href="#client_settings">Client Settings</a></li>
+    <li><a href="#technical_misc">Technical Misc</a></li>
+</ul>
+
+<div class="content">
+
+    <h1>Variables</h1>
+
+    <p>
+        <b>CustomHud Version: <code>2.3.0</code></b> <i style="font-size: 12px"><a href="">(See Other Versions)</a></i><br>
+        This is a list of every variable you can use in the profiles. There are over a hundred variables you can use.
+        For easy searching, the list has been broken down into related categories that you can see on the left sidebar.
+    </p>
+    <p>
+        If you're not using <a href="">Conditionals</a>, then you can safely ignore the <i>Number Value</i> and
+        <i>Boolean Value</i> columns.
+    </p>
+
+    <h3>What Each Column Means</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Column</th>
+            <th>Meaning</th>
+        </tr>
+        </thead>
+        <tbody class="left_cells">
+        <tr><td>Variable</td><td>What you type in the profile document to get the value. If you're not sure what that means, check out the <a href="">Getting Started</a> page</td></tr>
+        <tr><td>Description</td><td>This is what the variable will produce</td></tr>
+        <tr><td>Number Value</td><td>The variable's numerical value, used in <a href="">Conditionals</a>. If you aren't using Conditionals, you can ignore this column</td></tr>
+        <tr><td>Boolean Values</td><td>The variable's true/false value, used in <a href="">Conditionals</a>. If you aren't using Conditionals, you can ignore this column</td></tr>
+        <tr><td>Flags</td><td>Flags allow you to customize the variable's output. Variables that support flags contain a link to what flags are available for it</td></tr>
+        </tbody>
+    </table>
+
+    <h3 id="misc">Miscellaneous</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Stats-Variable">{stat:&lt;stat&gt;}<br><div style="white-space: nowrap">{stat:&lt;type&gt;:&lt;value&gt;}</div></a></td>
+            <td>Retrieve a stat</td>
+            <td>value saved in the stat</td>
+            <td>if value &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a>, <a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#formatted-only-for-the-statstat-variable">Formatted</a></td>
+        </tr>
+        <tr>
+            <td >{version}</td>
+            <td>The minecraft version. (Ex: <code>1.16.2</code>, <code>20w34a</code>)</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{client_version}</td>
+            <td>Game Version: (probably <code>fabric</code>)</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{modded_name}</td>
+            <td>Client Brand Name: (probably <code>Fabric</code>)</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{fps}</td>
+            <td>Frames per Second</td>
+            <td>the fps</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+
+        <tr>
+            <td >{tps}</td>
+            <td>How many ticks happen every second.<br>Maxes out at 20<br> - <strong>Singleplayer Only</strong></td>
+            <td>the millisecond it takes for a tick</td>
+            <td>if it can get the value<br>(aka you&#39;re in singleplayer)</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{ms_ticks}</td>
+            <td>The time it takes for a tick in milliseconds<br> - <strong>Singleplayer Only</strong></td>
+            <td>the millisecond it takes for a tick</td>
+            <td>if it can get the value<br>(aka you&#39;re in singleplayer)</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{tx}<br>{packets_sent}</td>
+            <td>Number of packets sent by the client to the server</td>
+            <td>number of packets</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{rx}<br>{packets_received}</td>
+            <td>Number of packets received by the client from the server</td>
+            <td>number of packets</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+
+        <tr>
+            <td >{moon_phase}</td>
+            <td>The phase of the moon (1-8)</td>
+            <td>the moon phase</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{moon_phase_word}</td>
+            <td>The phase of the moon in words</td>
+            <td>length of output</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+
+        <tr>
+            <td >{mods}</td>
+            <td>The amount of mods installed</td>
+            <td>mods installed</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{ping}</td>
+            <td>The ping to the server</td>
+            <td>the ping</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{address}</td>
+            <td>The address (as written in the address field) of the server</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td class="last_cell"><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <h3 id="position">Position</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{x}</td>
+            <td>The player’s x coordinate<br>Ex: 320.153</td>
+            <td>x coordinate</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{y}</td>
+            <td>The player’s y coordinate<br>Ex: 80.459</td>
+            <td>y coordinate</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{z}</td>
+            <td>The player’s z coordinate<br>Ex: 1200.963</td>
+            <td>z coordinate</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{bx} / {block_x}</td>
+            <td>The x coordinate of the block the player’s feet is at.<br>Ex: 320</td>
+            <td>x coordinate</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{by} / {block_y}</td>
+            <td>The y coordinate of the block the player’s feet is at.<br>Ex: 80</td>
+            <td>y coordinate</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{bz} / {block_z}</td>
+            <td>The z coordinate of the block the player’s feet is at.<br>Ex: 1200</td>
+            <td>z coordinate</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{icx} / {in_chunk_x}</td>
+            <td>The player’s x coordinate inside the chunk<br>(between 0-15)</td>
+            <td>in chunk x</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{icy} / {in_chunk_y}</td>
+            <td>The player’s y coordinate inside the chunk<br>(between 0-15)</td>
+            <td>in chunk y</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{icz} / {in_chunk_z}</td>
+            <td>The player’s z coordinate inside the chunk<br>(between 0-15)</td>
+            <td>in chunk z</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{cx} / {chunk_x}</td>
+            <td>The chunk’s x coordinate<br>(goes up by 1 every 16 blocks in the x direction)</td>
+            <td>chunk x</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{cy} / {chunk_y}</td>
+            <td>The chunk’s y coordinate<br>(goes up by 1 every 16 blocks in the y direction)</td>
+            <td>chunk y</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{cz} / {chunk_z}</td>
+            <td>The chunk’s z coordinate<br>(goes up by 1 every 16 blocks in the z direction)</td>
+            <td>chunk z</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{rex} / {region_x}</td>
+            <td>Region X</td>
+            <td>the x</td>
+            <td>if x &gt; 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{rez} / {region_z}</td>
+            <td>Region Z</td>
+            <td>the z</td>
+            <td>if z &gt; 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{rrx} / {region_relative_x}</td>
+            <td>Region Relative X</td>
+            <td>the x</td>
+            <td>if x &gt; 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{rrz} / {region_relative_z}</td>
+            <td>Regixon Relative Z</td>
+            <td>the z</td>
+            <td>if z &gt; 0</td>
+            <td class="last_cell">None</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="direction">Direction</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{facing}</td>
+            <td>The cardinal direction the player is facing.<br>(North, South, East, West)</td>
+            <td>length of output</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{facing_short}</td>
+            <td>The cardinal direction the player is facing, but shorter.<br>(N, S, E, W)</td>
+            <td>length of output (1)</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{facing_towards_pn_word}<br>OR<br>{facing_towards_pn_sign}</td>
+            <td>
+                If the player is looking at the positive or negative direction of the axis
+                <br>
+                <table >
+                    <tr>
+                        <td style="border-radius: 10px 0 0 0;"><b>Word:</b></td>
+                        <td>positive</td>
+                        <td style="border-radius: 0 10px 0 0;">negative</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sign:</b></td>
+                        <td>+</td>
+                        <td class="last_cell">-</td>
+                    </tr>
+                </table>
+            </td>
+            <td>0 (negative)<br>1 (positive)</td>
+            <td>if facing a positive direction (east/south)</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{facing_towards_xz}</td>
+            <td>Which horizontal axis the player is facing<br>(x or z)</td>
+            <td>length of output</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{yaw}</td>
+            <td>The yaw rotation of the player</td>
+            <td>the yaw</td>
+            <td>if the yaw is positive</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{pitch}</td>
+            <td>The pitch rotation of the player</td>
+            <td>the pitch</td>
+            <td>if the pitch is positive</td>
+            <td class="last_cell"><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="velocity">Velocity</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{velocity_xz}</td>
+            <td>Horizontal (XZ) velocity in blocks per second</td>
+            <td rowspan="6" class="rowspan">the velocity</td>
+            <td rowspan="6" class="rowspan">if greater than 0</td>
+            <td rowspan="6"  class="rowspan last_cell"><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td>{velocity_y}</td>
+            <td class="rowspan_fix_right">Vertical (Y) velocity in blocks per second</td>
+        </tr>
+        <tr>
+            <td>{velocity_xyz}</td>
+            <td class="rowspan_fix_right">Total (XYZ) velocity in blocks per second</td>
+        </tr>
+        <tr>
+            <td>{velocity_xz_kmh}</td>
+            <td class="rowspan_fix_right">Horizontal (XZ) velocity in kilometers per hour (km/h)</td>
+        </tr>
+        <tr>
+            <td>{velocity_y_kmh}</td>
+            <td class="rowspan_fix_right">Vertical (Y) velocity in kilometers per hour (km/h)</td>
+        </tr>
+        <tr>
+            <td>{velocity_xyz_kmh}</td>
+            <td class="rowspan_fix_right">Total (XYZ) velocity in kilometers per hour (km/h)</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="biome_and_dimension">Biome and Dimension</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{biome}</td>
+            <td>The biome the player is in.<br><i>Ex: “Plains&quot;, “Desert”</i></td>
+            <td rowspan="4" class="rowspan">length of output</td>
+            <td rowspan="4" class="rowspan">length of output &gt; 0</td>
+            <td rowspan="4" class="rowspan last_cell"><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td>{biome_id}</td>
+            <td class="rowspan_fix_right">The id of the biome the player is in.<br><i>Ex: “minecraft:plains”, “minecraft:desert”</i></td>
+        </tr>
+        <tr>
+            <td>{dimension}</td>
+            <td class="rowspan_fix_right">The dimention the player is in.<br><i>Ex: “Overworld”, “The Nether”, &quot;The End&quot;</i></td>
+        </tr>
+        <tr>
+            <td>{dimension_id}</td>
+            <td class="rowspan_fix_right">The id of the dimension the player is in.<br><i>Ex: “minecraft:overworld”, “minecraft:the_nether”</i></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="particles_and_entities">Particles and Entities (No Flags)</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{p} / {particles}</td>
+            <td>Number of particles visable or loaded (not sure)</td>
+            <td>number of particles</td>
+            <td>if more than 0 particles</td>
+        </tr>
+        <tr>
+            <td>{entities_rendered}</td>
+            <td>Number of entities being rendered</td>
+            <td rowspan="10" class="rowspan">number of entities</td>
+            <td rowspan="10" class="rowspan last_cell">if more than 0 entities</td>
+        </tr>
+        <tr>
+            <td>{entities_loaded}</td>
+            <td class="rowspan_fix_right">Total entities in the loaded area</td>
+        </tr>
+        <tr>
+            <td>{monsters}</td>
+            <td class="rowspan_fix_right">Total amount of monsters in the loaded chunks</td>
+        </tr>
+        <tr>
+            <td>{creatures}</td>
+            <td class="rowspan_fix_right">The total amount of creatures in the loaded chunks</td>
+        </tr>
+        <tr>
+            <td>{ambient_mobs}</td>
+            <td class="rowspan_fix_right">The total amount of ambient mobs in the loaded chunks</td>
+        </tr>
+        <tr>
+            <td>{axolotls}</td>
+            <td class="rowspan_fix_right">The total amount of axolotls in the loaded chunks</td>
+        </tr>
+        <tr>
+            <td>{underground_water_creature}</td>
+            <td class="rowspan_fix_right">The total amount of underground water creature mobs in the loaded chunks</td>
+        </tr>
+        <tr>
+            <td>{water_creatures}</td>
+            <td class="rowspan_fix_right">The total amount of water creatures in the loaded chunks</td>
+        </tr>
+        <tr>
+            <td>{water_ambient_mobs}</td>
+            <td class="rowspan_fix_right">The total amount of ambient water mobs in the loaded chunks</td>
+        </tr>
+        <tr>
+            <td>{misc_mobs}</td>
+            <td class="rowspan_fix_right">The total amount of miscellaneous mobs in the loaded chunks</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="day_and_time">Day and Time</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{day}</td>
+            <td>The number of in-game days the player has been in the world</td>
+            <td>number of days</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{hour} / {hour12}</td>
+            <td>In Minecraft’s time scale</td>
+            <td>the hour</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{hour24}</td>
+            <td>In Minecraft’s time scale</td>
+            <td>the hour</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{minute}</td>
+            <td>In Minecraft’s time scale</td>
+            <td>the minute</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{am_pm}</td>
+            <td>In Minecraft’s time scale</td>
+            <td>2</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td style="white-space: nowrap">{real_time:&lt;time_format&gt;}</td>
+            <td>Displays the irl time, based on the format given. <br>For formatting look  here</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td class="last_cell"><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="difficulty_and_light_levels">Difficulty and Light Levels</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description / Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{local_difficulty}</td>
+            <td>The difficulty of the chunk the player is in</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{clamped_local_difficulty}</td>
+            <td>The difficulty of the chunk the player is in<br>(clamped)</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{light}<br>{client_light}</td>
+            <td>The total light level of where the player is.</td>
+            <td>if can get info</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{light_sky}<br>{client_light_sky}</td>
+            <td>The light level from the sky<br>(reported by the client)</td>
+            <td>if can get info</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{light_block}<br>{client_light_block}</td>
+            <td>The light level from blocks<br>(reported by the client)</td>
+            <td>if can get info</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{server_light_sky}</td>
+            <td>The light level from the sky<br>(reported by the server)</td>
+            <td>if can get info</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{server_light_block}</td>
+            <td>The light level from blocks<br>(reported by the server)</td>
+            <td>if can get info</td>
+            <td class="last_cell">None</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="chunks">Chunk Related Stuff (No Flags)</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{chunks_rendered}</td>
+            <td>Number of chunks being rendered</td>
+            <td>number of chunks</td>
+            <td><code>true</code></td>
+        </tr>
+        <tr>
+            <td >{chunks_loaded}</td>
+            <td>Number of chunks in the loaded area</td>
+            <td>number of chunks</td>
+            <td><code>true</code></td>
+        </tr>
+        <tr>
+            <td >{chunks_culling}</td>
+            <td>If Chunk culling is on</td>
+            <td>0 (off)<br>1 (on)</td>
+            <td>if chunk culling is on</td>
+        </tr>
+        <tr>
+            <td >{slime_chunk}</td>
+            <td>If the chunk is a slime chunk</td>
+            <td>0 (false)<br>1 (true)</td>
+            <td>if chunk is slime chunk</td>
+        </tr>
+        <tr>
+            <td >{fc}<br>{force_loaded_chunks}</td>
+            <td>Number of forced loaded chunks</td>
+            <td>number of chunks</td>
+            <td>number of chunks &gt; 0</td>
+        </tr>
+        <tr>
+            <td >{sc}<br>{spawn_chunks}</td>
+            <td>The total amount of spawn chunks in the world (usually 289).</td>
+            <td>number of spawn chunks</td>
+            <td class="last_cell">if greater than 0</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="sounds">Sounds (No Flags)</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description / Number Value</th>
+            <th>Boolean Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{sounds} / {streaming_sounds}</td>
+            <td>The number of streaming sounds currently playing (like breaking/placing blocks)</td>
+            <td rowspan="5">if greater than 0</td>
+        </tr>
+        <tr>
+            <td >{max_sounds} / {max_streaming_sounds}</td>
+            <td>The max amount of streaming sounds that can play at once</td>
+        </tr>
+        <tr>
+            <td >{static_sounds}</td>
+            <td>The number of static sounds currently playing (ambient sounds)</td>
+        </tr>
+        <tr>
+            <td >{max_static_sounds}</td>
+            <td>The max amount of static sounds that can play at once</td>
+        </tr>
+        <tr>
+            <td >{mood}</td>
+            <td class="last_cell">How close the player is to the next mood ambience sound being played</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="targets">Target Block/Fluid/Entity</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{target_block}</td>
+            <td>The name of the block the player&#39;s looking at</td>
+            <td>length of output</td>
+            <td rowspan="5">if the player is looking at a block</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{target_block_id}</td>
+            <td>The id of the block the player&#39;s looking at</td>
+            <td>length of output</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{tbx} / {target_x} / {target_block_x}</td>
+            <td>The x coordinate of<br>the block the player’s looking at</td>
+            <td>x coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{tby} / {target_y} / {target_block_y}</td>
+            <td>The y coordinate of<br>the block the player’s looking at</td>
+            <td>y coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{tbz} / {target_z} / {target_block_z}</td>
+            <td>The z coordinate of<br>the block the player’s looking at</td>
+            <td>z coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td >{target_fluid}</td>
+            <td>The name of the fluid the player&#39;s looking at</td>
+            <td>length of output</td>
+            <td rowspan="5">if the player is looking at a fluid</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{target_fluid_id}</td>
+            <td>The id of the fluid the player&#39;s looking at</td>
+            <td>length of output</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{tfx} / {target_fluid_x}</td>
+            <td>The x coordinate of<br>the fluid the player’s looking at</td>
+            <td>x coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{tfy} / {target_fluid_y}</td>
+            <td>The y coordinate of<br>the fluid the player’s looking at</td>
+            <td>y coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{tfz} / {target_fluid_z}</td>
+            <td>The z coordinate of<br>the fluid the player’s looking at</td>
+            <td>z coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td >{target_entity}</td>
+            <td>The name of the entity the player&#39;s looking at</td>
+            <td>length of output</td>
+            <td rowspan="5">if the player is looking at a entity</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{target_entity_id}</td>
+            <td>The id of the entity the player&#39;s looking at</td>
+            <td>length of output</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{tex} / {target_entity_x}</td>
+            <td>The x coordinate of<br>the entity the player’s looking at</td>
+            <td>x coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{tey} / {target_entity_y}</td>
+            <td>The y coordinate of<br>the entity the player’s looking at</td>
+            <td>y coordinate</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{tez} / {target_entity_z}</td>
+            <td>The z coordinate of<br>the entity the player’s looking at</td>
+            <td>z coordinate</td>
+            <td class="last_cell">None</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="items">Items In Hand</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{item}</td>
+            <td>Name of item in player&#39;s main hand</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{item_id}</td>
+            <td>Id of item in player&#39;s main hand</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{item_dur}<br>{item_durability}</td>
+            <td>Durability of item in player&#39;s main hand</td>
+            <td>durability</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{item_max_dur}<br>{item_max_durability}</td>
+            <td>Max durability of item in player&#39;s main hand</td>
+            <td>max durability</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{item_dur_per}<br>{item_durability_percent}</td>
+            <td>Percentage of durability left of item in player&#39;s main hand</td>
+            <td>durability %</td>
+            <td>if greater than 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{item_has_dur}<br>{item_has_durability}</td>
+            <td>If the item in the player&#39;s main hand can have durability</td>
+            <td>0 (false)<br>1 (true)</td>
+            <td>can have durability</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td >{oitem}<br>{offhand_item}</td>
+            <td>Name of item in player&#39;s offhand</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{oitem_id}<br>{offhand_item_id}</td>
+            <td>Id of item in player&#39;s offhand</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{oitem_dur}<br>{offhand_item_durability}</td>
+            <td>Durability of item in player&#39;s offhand</td>
+            <td>durability</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{oitem_max_dur}<br>{offhand_item_max_durability}</td>
+            <td>Max durability of item in player&#39;s offhand</td>
+            <td>max durability</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{oitem_dur_per}<br>{offhand_item_durability_percent}</td>
+            <td>Percentage of durability left of item in player&#39;s offhand</td>
+            <td>durability %</td>
+            <td>if greater than 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{oitem_has_dur}<br>{offhand_item_has_durability}</td>
+            <td>If the item in the player&#39;s offhand can have durability</td>
+            <td>0 (false)<br>1 (true)</td>
+            <td>can have durability</td>
+            <td class="last_cell">None</td>
+        </tbody>
+    </table>
+
+    <h3 id="pc_utilization">PC Utilization</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description / Number value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{cpu} / {cpu_usage}</td>
+            <td>CPU Usage</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{gpu} / {gpu_usage}</td>
+            <td>GPU Usage</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td >{memory_used_percentage}</td>
+            <td>Percentage of used memory to total memory</td>
+            <td><code>true</code></td>
+            <td><a href="">Precision and Scale</a></td>
+        </tr>
+        <tr>
+            <td >{memory_used}</td>
+            <td>Memory being used</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{memory_total}</td>
+            <td>Total memory minecraft has access to</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{memory_allocated_percentage}</td>
+            <td>Percentage of allocated to total memory</td>
+            <td><code>true</code></td>
+            <td><a href="">Precision and Scale</a></td>
+        </tr>
+        <tr>
+            <td >{memory_allocated}</td>
+            <td>Total memory will attempt to use</td>
+            <td><code>true</code></td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{off_heap}</td>
+            <td>Memory that&#39;s off the heap<br>- Shown in F3 when Sodium or Iris is installed<br>- Still works without them though</td>
+            <td><code>true</code></td>
+            <td class="last_cell"><a href="">Precision and Scale</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="pc_info">PC Information</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{gpu_name}</td>
+            <td>The name of the GPU</td>
+            <td>length of name</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{cpu_name}</td>
+            <td>The name of the CPU</td>
+            <td>length of name</td>
+            <td>length of output &gt; 0</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{cpu_cores}</td>
+            <td>Number of cores your cpu has</td>
+            <td>number of cores</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{cpu_threads}</td>
+            <td>Number of threads your cpu has</td>
+            <td>number of threads</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td >{display_width}</td>
+            <td>Minecraft’s windows width</td>
+            <td>the width</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{display_height}</td>
+            <td>Minecraft’s windows height</td>
+            <td>the height</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{display_refresh_rate}</td>
+            <td>Minecraft’s windows refresh rate</td>
+            <td>the refresh rate</td>
+            <td>if greater than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td >{java_version}</td>
+            <td>The version of java</td>
+            <td>length of output</td>
+            <td>length of output &gt; 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{java_bit}</td>
+            <td>If the java running is 32bit or 64bit</td>
+            <td>32 or 64</td>
+            <td><code>true</code></td>
+            <td class="last_cell">None</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="client_settings">Client Settings</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{max_fps}</td>
+            <td>Fps Limit set in the settings.<br>"<code>-</code>" if set to max</td>
+            <td>the max fps</td>
+            <td><code>false</code> if the limit is set to max<br><code>true</code> otherwise</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{vsync}</td>
+            <td>If vsync is enabled or not</td>
+            <td>0 (off)<br>1 (on)</td>
+            <td>if vsync is enabled</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{graphics_mode}</td>
+            <td>Graphics Quality (Fast, Fancy, or Fabulous)</td>
+            <td>0 (fast)<br>1 (fancy)<br>2 (fabulous)</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{clouds}</td>
+            <td>Cloud Quality (Off, Fast, Fancy)</td>
+            <td>0 (off)<br>1 (fast)<br>2 (fancy)</td>
+            <td>if clouds are on</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td >{biome_blend}</td>
+            <td>The player&#39;s biome blend setting</td>
+            <td>the biome blend</td>
+            <td>if biome blend is enabled</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{render_distance}</td>
+            <td>The player’s render distance setting</td>
+            <td>render distance</td>
+            <td>if more than 0</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td >{sd} / {simulation_distance}</td>
+            <td>Simulation Distance set in the settings</td>
+            <td>simulation distance</td>
+            <td><code>true</code></td>
+            <td class="last_cell">None</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="technical_misc">Technical Miscellaneous (No Flags)</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >{queued_tasks}</td>
+            <td>Pending chunks to be batched (pC in the F3 screen)</td>
+            <td>pending chunks</td>
+            <td>if more than 0</td>
+        </tr>
+        <tr>
+            <td >{upload_queue}</td>
+            <td>Pending uploads to video card (pU in the F3 screen)</td>
+            <td>pending upload</td>
+            <td>if more than 0</td>
+        </tr>
+        <tr>
+            <td >{buffer_count}</td>
+            <td>Available buffers to use in the batching process. (aB in the F3 screen)</td>
+            <td>available buffers</td>
+            <td>if more than 0</td>
+        </tr>
+        <tr>
+            <td >{chs}</td>
+            <td>The Y coordinate of the highest non-air block at the player’s X/Z coordinate. (reported by the client)</td>
+            <td>the y coordinate</td>
+            <td><code>false</code> if can&#39;t get info</td>
+        </tr>
+        <tr>
+            <td >{chm}</td>
+            <td>The Y coordinate of the highest block at the player’s X/Z coordinate that has a blocking-motion material or is liquid. (reported by the client)</td>
+            <td>the y coordinate</td>
+            <td><code>false</code> if can&#39;t get info</td>
+        </tr>
+        <tr>
+            <td >{shs}</td>
+            <td>The Y coordinate of the highest non-air block at the player’s X/Z coordinate. (reported by the server)</td>
+            <td>the y coordinate</td>
+            <td><code>false</code> if can&#39;t get info</td>
+        </tr>
+        <tr>
+            <td >{shm}</td>
+            <td>The Y coordinate of the highest block at the player’s X/Z coordinate that has a blocking-motion material or is liquid. (reported by the server)</td>
+            <td>the y coordinate</td>
+            <td><code>false</code> if can&#39;t get info</td>
+        </tr>
+        <tr>
+            <td >{sho}</td>
+            <td>The Y coordinate of the highest block at the player’s X/Z coordinate that has a blocking-motion material. (reported by the server)</td>
+            <td>the y coordinate</td>
+            <td><code>false</code> if can&#39;t get info</td>
+        </tr>
+        <tr>
+            <td >{shm}</td>
+            <td>The Y coordinate of the highest block at the player’s X/Z coordinate that has a blocking-motion material or is liquid. (reported by the server)</td>
+            <td>the y coordinate</td>
+            <td><code>false</code> if can&#39;t get info</td>
+        </tr>
+        <tr>
+            <td >{shml}</td>
+            <td>The Y coordinate of the highest block at the player’s X/Z coordinate that has a blocking-motion material and is not leaves. (reported by the server)</td>
+            <td>the y coordinate</td>
+            <td class="last_cell"><code>false</code> if can&#39;t get info</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
