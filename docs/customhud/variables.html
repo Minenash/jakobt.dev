@@ -907,7 +907,7 @@
         <tbody>
         <tr>
             <td id="particles">{p} / {particles}</td>
-            <td>Number of particles visable or loaded (not sure)</td>
+            <td>Number of particles visible or loaded (not sure)</td>
             <td>number of particles</td>
             <td>if more than 0 particles</td>
         </tr>
@@ -1132,23 +1132,23 @@
         <tr>
             <td id="streaming_sounds">{sounds} / {streaming_sounds}</td>
             <td>The number of streaming sounds currently playing (like breaking/placing blocks)</td>
-            <td rowspan="5">if greater than 0</td>
+            <td rowspan="5" class="rowspan last_cell">if greater than 0</td>
         </tr>
         <tr>
             <td id="max_sounds">{max_sounds} / {max_streaming_sounds}</td>
-            <td>The max amount of streaming sounds that can play at once</td>
+            <td class="rowspan_fix_right">The max amount of streaming sounds that can play at once</td>
         </tr>
         <tr>
             <td id="static_sounds">{static_sounds}</td>
-            <td>The number of static sounds currently playing (ambient sounds)</td>
+            <td class="rowspan_fix_right">The number of static sounds currently playing (ambient sounds)</td>
         </tr>
         <tr>
             <td id="max_static_sounds">{max_static_sounds}</td>
-            <td>The max amount of static sounds that can play at once</td>
+            <td class="rowspan_fix_right">The max amount of static sounds that can play at once</td>
         </tr>
         <tr>
             <td id="mood">{mood}</td>
-            <td class="last_cell">How close the player is to the next mood ambience sound being played</td>
+            <td class="rowspan_fix_right">How close the player is to the next mood ambience sound being played</td>
         </tr>
         </tbody>
     </table>
@@ -1245,7 +1245,7 @@
             <td id="target_entity">{target_entity}</td>
             <td>The name of the entity the player&#39;s looking at</td>
             <td>length of output</td>
-            <td rowspan="5">if the player is looking at a entity</td>
+            <td rowspan="5" class="rowspan">if the player is looking at a entity</td>
             <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
         </tr>
         <tr>
