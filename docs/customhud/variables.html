@@ -36,6 +36,7 @@
     <li><a href="#pc_info">PC Info</a></li>
     <li><a href="#client_settings">Client Settings</a></li>
     <li><a href="#technical_misc">Technical Misc</a></li>
+    <li><a href="#sodium">Mods</a></li>
 </ul>
 
 <div class="content">
@@ -1235,6 +1236,94 @@
             <td>The Y coordinate of the highest block at the player’s X/Z coordinate that has a blocking-motion material and is not leaves. (reported by the server)</td>
             <td>the y coordinate</td>
             <td class="last_cell"><code>false</code> if can&#39;t get info</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="sodium">Sodium (No Flags)<br><div style="font-size: 12px; font-style: italic; font-weight: normal;">Requires <a href="">Sodium</a> to be installed</div></h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{sodium_version}</td>
+            <td>Sodium Version</td>
+            <td>length of output</td>
+            <td>length of output > 0</td>
+        </tr>
+        <tr>
+            <td>{sodium_chunk_arena_allocator}</td>
+            <td>Sodium Chunk Arena Memory Allocator</td>
+            <td>length of output</td>
+            <td>length of output > 0</td>
+        </tr>
+        <tr>
+            <td>{sodium_staging_buffers}</td>
+            <td>Sodium Staging Buffers</td>
+            <td>number of staging buffers</td>
+            <td>if greater than 0</td>
+        </tr>
+        <tr>
+            <td>{sodium_buffer_objects}</td>
+            <td>Sodium Device Buffer Objects</td>
+            <td>number of buffer objects</td>
+            <td>if greater than 0</td>
+        </tr>
+        <tr>
+            <td>{sodium_memory_used}</td>
+            <td>Sodium Device Memory Used</td>
+            <td>memory used</td>
+            <td>if greater than 0</td>
+        </tr>
+        <tr>
+            <td>{sodium_memory_allocated}</td>
+            <td>Sodium Device Memory Allocated</td>
+            <td>memory allocated</td>
+            <td>if greater than 0</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 id="iris">Iris (No Flags)<div style="font-size: 12px; font-style: italic; font-weight: normal;">Requires <a href="">Iris</a> to be installed</div></h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{iris_version}</td>
+            <td>Iris Version</td>
+            <td>length of output</td>
+            <td>length of output > 0</td>
+        </tr>
+        <tr>
+            <td>{iris_shaderpack}</td>
+            <td>Shaderpack file loaded</td>
+            <td>length of output</td>
+            <td>length of output > 0</td>
+        </tr>
+        <tr>
+            <td>{iris_shaderpack_profile}</td>
+            <td>Shaderpack profile loaded</td>
+            <td>length of output</td>
+            <td>length of output > 0</td>
+        </tr>
+        <tr>
+            <td>{iris_shaderpack_changes}</td>
+            <td>How many changes the user made to the profile</td>
+            <td>number of changes</td>
+            <td>number of changes > 0</td>
         </tr>
         </tbody>
     </table>

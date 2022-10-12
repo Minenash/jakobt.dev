@@ -81,7 +81,7 @@ thead {
 }
 
 th {
-    background-color: lightgray;
+    background-color: #bbb;
     border-bottom: 2px solid;
     border-right: 2px solid;
     padding: 10px 8px 6px 8px;
@@ -94,7 +94,7 @@ td {
     padding: 8px;
 }
 
-tr:nth-child(even) td{ background-color: #e0e0e0; }
+tr:nth-child(even) td{ background-color: #ddd; }
 th:last-child, td:last-child { border-right: none; }
 .rowspan_fix_right { border-right: 2px solid !important; }
 tr:last-child td, .rowspan { border-bottom: none; }
@@ -110,7 +110,7 @@ tr:last-child td:first-child { border-radius: 0 0 0 10px; }
 
 .inner_nav {
     position: sticky;
-    top: 70px;
+    top: 64px;
     border-radius: 10px;
     z-index: 1;
     width: 10%;
