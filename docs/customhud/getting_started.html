@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8>
+    <title>Variables - CustomHud</title>
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport>
+    <meta content="The Home of Terrible Projects" name=description>
+<!--    <link rel="icon" type="image/png" href="favicon_92x.png"/>-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>html {background-color:#f4f5f7} body {display:none}</style>
+</head>
+<body>
+
+<ul class="nav" style="position: sticky; top: 0; z-index: 1;">
+    <li><a class="logo"><b>CustomHud Docs</b></a></li>
+    <li><a href="https://github.com/Minenash/CustomHUD/wiki">Getting Started</a></li>
+    <li><a href="variables" class="active">Variables</a></li>
+    <li><a href="https://github.com/Minenash/CustomHUD/wiki/Conditonals">Conditionals</a></li>
+</ul>
+<div class="getting_started_content">
+    <h1>Getting Started</h1>
+    <p>This page will help you get started with CustomHud</p>
+
+    <h2>Step 1: How do I edit profiles?</h2>
+    <div class="note">
+        <b>Note:</b> If you don't have <a href="https://modrinth.com/mod/modmenu">Mod Menu</a> installed, I highly recommend you do so, as it makes
+        configuring pretty much all fabric mods easier.
+    </div>
+    <h3>Via your File Browser</h3>
+    <p>The profiles are located at <code>.minecraft/config/customhud/profiles</code></p>
+    <h3>Via Modmenu (Recommended)</h3>
+    <p>Click on Mods → CustomHud → Settings Button → Edit Profile 1/2/3</p>
+    <img src="getting_started_imgs/instructions_half.png" width=""/>
+
+    <h2>Step 2: Displaying your first text</h2>
+    <div class="note">
+        <b>Note:</b> The HUD will automatically update when the profile file is saved. Meaning that you can go
+        back into game to see the changes everytime you hit save!
+    </div>
+    <h3>Step 2a: Start Fresh</h3>
+    <p>We're going to be starting from scratch. You can either pick a profile that is blank, or delete the contents of one</p>
+    <h3>Step 2b: Normal Text</h3>
+
+    <div>
+        <div style="float: left; width: 45%; margin-right: 5%">
+            <p>
+                Almost anything you write will be displayed verbatim, the major exceptions are stuff
+                inside {}s and & followed by the next character.
+            </p>
+            <p>So lets go ahead write something</p>
+            <div class="code">
+                <b style="text-decoration: underline">profile1.txt</b><br>
+                <code>
+                    Hello World
+                </code>
+            </div>
+        </div>
+
+        <img style="float: right" src="getting_started_imgs/step_2b.png" width="50%">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2>Step 3: Variables</h2>
+
+    <p>
+        Variables produce a value, like fps, xyz, biome, etc <br>
+        <b>Syntax:</b> <code>{&lt;variable_name&gt; [flags]}</code> <br>
+        <b>Examples:</b> <code>{fps}</code>, <code>{x}</code>, <code>{biome}</code>, <code>{ping}</code>
+    </p>
+
+    <h3>Step 3a: Basics</h3>
+    <div>
+        <div style="float: left; width: 45%; margin-right: 5%">
+            <div class="note">
+                <b>Reference:</b> <a href="variables">All the variables available.</a> (You can safely ignore the
+                <i>Number Value</i> and <i>Boolean Value</i> columns for now)<br>
+            </div>
+
+            <p>
+                For now, we will skip flags. Let's create a profile that shows our fps, coordinates, and biome.
+                <code>{bx}</code>, <code>{by}</code>, <code>{bz}</code> are the player's block coordinates.
+            </p>
+            <div class="code">
+                <b style="text-decoration: underline">profile1.txt</b><br>
+                <code>
+                    fps: {fps} <br>
+                    xyz: {bx} {by} {bz} <br>
+                    biome: {biome} <br>
+                </code>
+            </div>
+        </div>
+
+        <img style="float: right" src="getting_started_imgs/step_3a.png" width="50%">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3>Step 3b: Variable Flags</h3>
+    <p>
+        Variable Flags allow you to customize the output of certain variables.<br>
+        In the reference linked in <b>3a</b>, the last column shows what variable flags
+        can be used for that variable. <br>
+    </p>
+    <div class="note" style="width: 45%">
+        <b>Reference:</b> <a href="#">All the variable flags available.</a><br>(Use the reference from <b>3a</b>
+        for which flags each variable supports)<br>
+    </div>
+    <p>
+        For this example, let's use the String variable flags.
+    <ul>
+        <li><b>-uc</b> - Uppercase</li>
+        <li><b>-lc</b> - Lowercase</li>
+        <li><b>-tc</b> - Titlecase</li>
+        <li><b>-sc</b> - Small Caps</li>
+    </ul>
+    </p>
+    <div>
+        <div style="float: left; width: 45%; margin-right: 5%">
+
+            <p>So lets go ahead write something</p>
+            <div class="code">
+                <b style="text-decoration: underline">profile1.txt</b><br>
+                <code>
+                    {facing} - Default <br>
+                    {facing -uc} - Uppercase <br>
+                    {facing -lc} - Lowercase <br>
+                    {facing -tc} - Titlecase <br>
+                    {facing -sc} - Small Caps <br>
+                    {facing -tc -sc} - Titlecase + Small Caps
+                </code>
+            </div>
+        </div>
+
+        <img style="float: right" src="getting_started_imgs/step_3b.png" width="50%">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2>Step 4: Colors</h2>
+    <p>Let's add color to the profile we made in <b>2b</b>!</p>
+
+    <div>
+        <div style="float: left; width: 45%; margin-right: 5%">
+            <h3>Bukkit Color Codes</h3>
+            <p>CustomHud also supports Bukkit Color codes</p>
+            <div class="note">
+                <b>Reference:</b> Bukkit Color Codes<br>
+                <img src="https://static.planetminecraft.com/files/resource_media/screenshot/1807/example2-1518839184.png" width="100%">
+            </div>
+        </div>
+
+        <div style="float: right; width: 50%">
+            <h3>Custom Colors</h3>
+            <b>Syntax: </b><code>&{#AARRGGBB}</code> (AA - Alpha, RR - Red, GG - Green, BB - Blue) <br>
+            <b>Example:</b><code> &{FFFF0000}</code> (Pure Red)
+            <p>Use this if you want a specific color and you have the hex code for it. Just don't forget the first
+            two digits is the opaqueness of the text.</p>
+        </div>
+
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div>
+        <div style="float: left; width: 45%; margin-right: 5%">
+            <h3>Step 4a: Adding color to the profile we made in <b>2b</b></h3>
+            <div class="code">
+                <b style="text-decoration: underline">profile1.txt</b><br>
+                <code>
+                    fps: <b>&a</b>{fps} <br>
+                    xyz: <b>&c</b>{bx} <b>&a</b>{by} <b>&b</b>{bz} <br>
+                    biome: <b>&e</b>{biome} <br>
+                </code>
+            </div>
+        </div>
+
+        <img style="float: right" src="getting_started_imgs/step_4a.png" width="50%">
+    </div>
+
+
+
+    <div style="margin-bottom: 600px"></div>
+</div>
+</body>
