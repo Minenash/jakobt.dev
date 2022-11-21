@@ -69,15 +69,12 @@ a:hover {
 }
 
 .nav li:not(:first-child) a:hover {
-    /*background-color: #111;*/
-    /*border-radius: 25px;*/
     border-bottom: solid 2px #04AA6D;
     padding-bottom: 2px;
 }
 
 .active {
     border: solid 2px #04AA6D;
-    /*background-color: #04AA6D;*/
     border-radius: 15px;
 }
 
@@ -88,9 +85,9 @@ a:hover {
 .version {
     position: fixed;
     color: white;
-    font-size: 9px;
-    top: 25px;
-    left: 36px;
+    font-size: 11px;
+    top: 27px;
+    left: 37px;
     z-index: 1;
 }
 
@@ -233,6 +230,11 @@ tr:last-child td:first-child { border-radius: 0 0 0 10px; }
     }
     .side_nav {
         width: 140px;
+    }
+    .version {
+        font-size: 10px;
+        left: 33px;
+        top: 25px;
     }
 }
 
