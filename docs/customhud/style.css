@@ -203,9 +203,7 @@ tr:last-child td:first-child { border-radius: 0 0 0 10px; }
     float: left;
     box-shadow: #222 4px 0 2px;
     padding: 8px 0;
-    height: calc(100vh - 61px);
-    /*overflow-y: hidden;*/
-    transform: translateY(0px);
+    height: 100vh;
 }
 
 .side_nav li {
