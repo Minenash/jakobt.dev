@@ -12,32 +12,36 @@
 
 <ul class="nav" style="position: sticky; top: 0; z-index: 1;">
     <li><a class="logo"><b>CustomHud Docs</b></a></li>
+    <li><div class="separator"></div></li>
     <li><a href="https://github.com/Minenash/CustomHUD/wiki">Getting Started</a></li>
     <li><a href="#top" class="active">Variables</a></li>
     <li><a href="https://github.com/Minenash/CustomHUD/wiki/Conditonals">Conditionals</a></li>
 </ul>
-<h3></h3>
 
-<ul class="nav var_nav">
-    <li><a href="#misc">Misc</a></li>
-    <li><a href="#position">Position</a></li>
-    <li><a href="#direction">Direction</a></li>
-    <li><a href="#velocity">Velocity</a></li>
-    <li><a href="#biome_and_dimension">Biome & Dimension</a></li>
-    <li><a href="#particles_and_entities">Particles and Entities</a></li>
-    <li><a href="#day_and_time">Day and Time</a></li>
-    <li><a href="#difficulty_and_light_levels">Difficulty and Light Levels</a></li>
-    <li><a href="#chunks">Chunks</a></li>
-    <li><a href="#sounds">Sounds</a></li>
-    <li><a href="#targets">Targets</a></li>
-    <li><a href="#items">Items</a></li>
-    <li><a href="#pc_utilization">PC Info / Usage</a></li>
-    <li><a href="#client_settings">Client Settings</a></li>
-    <li><a href="#technical_misc">Technical Misc</a></li>
-    <li><a href="#sodium">Mods</a></li>
+<div class="version">Written for v2.1.0</div>
+
+<ul class="nav side_nav">
+    <li><a style="font-size: 16px; margin: 6px 0; text-decoration: underline">Categories</a></li>
+    <li style="text-decoration: none"><a href="#new">ɴᴇᴡ</a></li>
+    <li><a href="#misc">ᴍɪsᴄ</a></li>
+    <li><a href="#position">ᴘᴏsɪᴛɪᴏɴ</a></li>
+    <li><a href="#direction">ᴅɪʀᴇᴄᴛɪᴏɴ</a></li>
+    <li><a href="#velocity">ᴠᴇʟᴏᴄɪᴛʏ</a></li>
+    <li><a href="#biome_and_dimension">ʙɪᴏᴍᴇ, ᴅɪᴍᴇɴsɪᴏɴ</a></li>
+    <li><a href="#entities">ᴇɴᴛɪᴛɪᴇs</a></li>
+    <li><a href="#day_and_time">ᴅᴀʏ, ᴛɪᴍᴇ</a></li>
+    <li><a href="#difficulty_and_light_levels">ᴅɪꜰꜰɪᴄᴜʟᴛʏ, ʟɪɢʜᴛ</a></li>
+    <li><a href="#chunks">ᴄʜᴜɴᴋs</a></li>
+    <li><a href="#sounds">sᴏᴜɴᴅs</a></li>
+    <li><a href="#targets">ᴛᴀʀɢᴇᴛ</a></li>
+    <li><a href="#items">ɪᴛᴇᴍs</a></li>
+    <li><a href="#pc_utilization">ᴘᴄ ɪɴꜰᴏ, ᴜsᴀɢᴇ</a></li>
+    <li><a href="#client_settings">ᴄʟɪᴇɴᴛ sᴇᴛᴛɪɴɢs</a></li>
+    <li><a href="#technical_misc">ᴛᴇᴄʜɴɪᴄᴀʟ ᴍɪsᴄ</a></li>
+    <li><a href="#sodium">ᴍᴏᴅs</a></li>
 </ul>
 
-<div id="top" class="var_content">
+<div id="top" class="content">
 
     <h1>Variables</h1>
 
@@ -547,7 +551,12 @@
             <td><code>true</code></td>
             <td>None</td>
         </tr>
-
+        <tr>
+            <td id="particles">{p} / {particles}</td>
+            <td>Number of particles visible or loaded (not sure)</td>
+            <td>number of particles</td>
+            <td>if more than 0 particles</td>
+        </tr>
         <tr>
             <td id="tps">{tps}</td>
             <td>How many ticks happen every second.<br>Maxes out at 20<br> - <strong>Singleplayer Only</strong></td>
@@ -885,7 +894,7 @@
         </tbody>
     </table>
 
-    <h3 id="particles_and_entities">Particles and Entities (No Flags)</h3>
+    <h3 id="entities">Entities (No Flags)</h3>
     <table>
         <thead>
         <tr>
@@ -896,12 +905,6 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td id="particles">{p} / {particles}</td>
-            <td>Number of particles visible or loaded (not sure)</td>
-            <td>number of particles</td>
-            <td>if more than 0 particles</td>
-        </tr>
         <tr>
             <td id="entities_rendered">{entities_rendered}</td>
             <td>Number of entities being rendered</td>
