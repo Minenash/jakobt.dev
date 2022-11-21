@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8>
+    <title>Variables - CustomHud</title>
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport>
+    <meta content="The Home of Terrible Projects" name=description>
+<!--    <link rel="icon" type="image/png" href="favicon_92x.png"/>-->
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style>html {background-color:#f4f5f7} body {display:none}</style>
+<!--    f4f5f7-->
+</head>
+<body>
+
+<ul class="nav" style="position: sticky; top: 0; z-index: 1;">
+    <li><a class="logo"><b>CustomHud Docs</b></a></li>
+    <li><div class="separator"></div></li>
+    <li><a href="../getting_started.html" class="active">Getting Started</a></li>
+    <li><a href="../variables.html">Variables</a></li>
+    <li><a href="https://github.com/Minenash/CustomHUD/wiki/Conditonals">Conditionals</a></li>
+</ul>
+
+<!--<div style="color: white; font-size: 9px; position: absolute; top: 26px; left: 36px; z-index: 1" href="#">Written for v3.0.0</div>-->
+
+<ul class="nav side_nav side_nav_getting_started">
+    <li><a style="font-size: 16px; margin: 6px 0; text-decoration: underline; text-align: center">Parts</a></li>
+    <li><a href="../getting_started.html">1. Accessing Files</a></li>
+    <li><a href="part2.html">2. First Text</a></li>
+    <li><a href="part3.html">3. Variables</a></li>
+    <li><a href="#top">4. Variable Flags</a></li>
+    <li><a href="part5.html">5. Colors</a></li>
+    <li><a href="part6.html">6. Conditionals</a></li>
+</ul>
+
+<div id="top" class="var_content">
+    <br>
+
+    <h2>4. Variable Flags</h2>
+    <p>
+        Variable Flags allow you to customize the output of certain variables.<br>
+    </p>
+    <div class="note" style="width: 43%;">
+        <b>Reference:</b> <a href="#">All the variable flags available.</a>
+    </div>
+    <div style="height: 12px"></div>
+    <div class="note"  style="width: 43%">
+        <b>Reference:</b> <a href="variables">Variables table</a> (see the flags column)
+    </div>
+
+    <h3>Instructions</h3>
+    <p> For this example, let's use the String variable flags. </p>
+    <ul>
+        <li><b>-uc</b> - Uppercase</li>
+        <li><b>-lc</b> - Lowercase</li>
+        <li><b>-tc</b> - Titlecase</li>
+        <li><b>-sc</b> - Small Caps (replaces lowercase letters with small capital letters)</li>
+    </ul>
+
+    <div>
+        <div style="float: left; width: 45%; margin-right: 5%">
+            <h3>Profile File</h3>
+            <div class="code_block">
+                <b style="text-decoration: underline">profile1.txt</b><br>
+                <code>
+                    {facing} - Default <br>
+                    {facing -uc} - Uppercase <br>
+                    {facing -lc} - Lowercase <br>
+                    {facing -tc} - Titlecase <br>
+                    {facing -sc} - Small Caps <br>
+                    {facing -tc -sc} - Titlecase + Small Caps
+                </code>
+            </div>
+        </div>
+
+        <div style="float:right; width: 45%;">
+            <h3>Result In-Game</h3>
+            <div class="result" style='background-image: url("imgs/part4.png")'></div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+</div>
+</body>
