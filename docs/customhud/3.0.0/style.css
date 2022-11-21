@@ -57,8 +57,35 @@ a:hover {
     padding-top: 6px;
 }
 
+.nav li a.active {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.nav li:not(:first-child) a:hover {
+    /*background-color: #111;*/
+    /*border-radius: 25px;*/
+    border-bottom: solid 2px #04AA6D;
+    padding-bottom: 2px;
+}
+
+.active {
+    border: solid 2px #04AA6D;
+    /*background-color: #04AA6D;*/
+    border-radius: 15px;
+}
+
 .logo {
-    /*transform: translateY(-2px);*/
+    transform: translateY(-5px);
+}
+
+.version {
+    position: fixed;
+    color: white;
+    font-size: 9px;
+    top: 25px;
+    left: 36px;
+    z-index: 1;
 }
 
 .separator {
@@ -73,19 +100,6 @@ a:hover {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
     color: #00000020;
-}
-
-.nav li:not(:first-child) a:hover {
-    /*background-color: #111;*/
-    /*border-radius: 25px;*/
-    border-bottom: solid 2px #04AA6D;
-    padding-bottom: 2px;
-}
-
-.active {
-    border: solid 2px #04AA6D;
-    /*background-color: #04AA6D;*/
-    border-radius: 15px;
 }
 
 .note {
@@ -177,7 +191,7 @@ tr:last-child td:first-child { border-radius: 0 0 0 10px; }
 
 
 .side_nav {
-    position: sticky;
+    position: fixed;
     top: 44px;
     width: 140px;
     float: left;
@@ -207,6 +221,21 @@ tr:last-child td:first-child { border-radius: 0 0 0 10px; }
 
 .side_nav_getting_started li a {
     text-align: left;
+}
+
+.next { left: 80px }
+.prev { left: 12px }
+
+.next, .prev {
+    position: fixed;
+    bottom: 12px;
+    color: white;
+    padding-bottom: 2px;
+}
+.next:hover, .prev:hover {
+    text-decoration: none;
+    border-bottom: solid 2px #04AA6D;
+    padding-bottom: 0;
 }
 
 rect {
