@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8>
+    <title>Variables - CustomHud</title>
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport>
+    <meta content="The Home of Terrible Projects" name=description>
+<!--    <link rel="icon" type="image/png" href="favicon_92x.png"/>-->
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+    <style>html {background-color:#f4f5f7} body {display:none}</style>
+<!--    f4f5f7-->
+</head>
+<body>
+
+<ul class="nav" style="position: sticky; top: 0; z-index: 1;">
+    <li><a class="logo"><b>CustomHud Docs</b></a></li>
+    <li><div class="separator"></div></li>
+    <li><a href="#top">Getting Started</a></li>
+    <li><a href="../variables.html">Variables</a></li>
+    <li><a href="https://github.com/Minenash/CustomHUD/wiki/Conditonals">Conditionals</a></li>
+    <li><a href="#" class="active">References</a></li>
+</ul>
+
+<div class="version">Written for v3.0.0</div>
+
+<ul class="nav side_nav">
+    <li><a class="side_nav_header">General</a></li>
+    <li><a href="#">Profile Sections</a></li>
+    <li><a href="#">Theming</a></li>
+    <li><a href="#">Variable Flags</a></li>
+    <li><a href="#">Colors</a></li>
+    <li><a href="#">Fonts</a></li>
+    <li><a style="height:8px; width: 0"></a></li>
+    <li><a class="side_nav_header">Special Variables</a></li>
+    <li><a href="#">Stats</a></li>
+    <li><a href="#">Real Time</a></li>
+    <li><a href="#">Item / Slot</a></li>
+    <li><a href="#">Icons</a></li>
+</ul>
+
+
+<div id="top" class="content">
+    <br>
+
+    <h2>Theming</h2>
+    <p>
+        Theming allows you to customize the style of your profiles, like foreground and background color, font, scale,
+        text shadow, and line spacing
+    </p>
+    <h3>Profile Wide</h3>
+    <p>
+        Profile-Wide Theme Options have to be placed above any <a href="#">Section Headers</a><br>
+        <b>Syntax:</b> <code class="code_inline">==&lt;option&gt;:&lt;value&gt;==</code>
+    </p>
+    <h3>Local</h3>
+    <p>
+        Want to change the style only for a part of the profile? You can use the local variant for that.<br>
+        <b>Syntax:</b> <code class="code_inline">=&lt;option&gt;:&lt;value&gt;=</code>
+    </p>
+
+    <h3>Theme Options:</h3>
+    <table style="width: 77%">
+        <thead>
+        <tr> <th>Option</th> <th>Description</th> <th>Value Type</th> <th>Default Value</th> </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ForegroundColor</td>
+            <td>Color of the text</td>
+            <td><a href="#">Color</a></td>
+            <td>#FFFFFFFF</td>
+        </tr>
+        <tr>
+            <td>BackgroundColor</td>
+            <td>Color of the background</td>
+            <td><a href="#">Color</a></td>
+            <td>#44000000</td>
+        </tr>
+        <tr>
+            <td>Scale</td>
+            <td>Scale of the hud</td>
+            <td>Decimal</td>
+            <td>1.0</td>
+        </tr>
+        <tr>
+            <td>LineSpacing</td>
+            <td>How much space there is between lines</td>
+            <td>Integer</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>TextShadow</td>
+            <td>Should the text have a shadow</td>
+            <td>true / false</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>Font</td>
+            <td>The font the text should be rendered in</td>
+            <td>Identifier</td>
+            <td>minecraft:default</td>
+        </tr>
+        <tr>
+            <td>TargetRange</td>
+            <td>How far does the target variables work</td>
+            <td>Integer</td>
+            <td>20</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
