@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset=utf-8>
-    <title>Variables - CustomHud</title>
+    <title>Colors - Getting Started - CustomHud</title>
     <meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport>
     <meta content="The Home of Terrible Projects" name=description>
 <!--    <link rel="icon" type="image/png" href="favicon_92x.png"/>-->
@@ -28,7 +28,9 @@
     <li><a href="part3.html">3. Variables</a></li>
     <li><a href="part4.html">4. Variable Flags</a></li>
     <li><a href="#top">5. Colors</a></li>
-    <li><a href="part6.html">6. Conditionals</a></li>
+    <li><a href="part6.html">6. Profile Sections</a></li>
+    <li><a href="part7.html">7. Theming</a></li>
+    <li><a href="part8.html">8. Conditionals</a></li>
 </ul>
 
 <a class="next" href="part6.html">Next →</a>
@@ -46,7 +48,7 @@
             <p>CustomHud supports Bukkit Color codes</p>
             <div class="note">
                 <b>Reference:</b> Bukkit Color Codes<br>
-                <img src="https://static.planetminecraft.com/files/resource_media/screenshot/1807/example2-1518839184.png" width="100%">
+                <img src="https://static.planetminecraft.com/files/resource_media/screenshot/1807/example2-1518839184.png" width="100%" alt="bukkit colors reference">
             </div>
         </div>
 
@@ -57,69 +59,27 @@
 
             <table style="margin-bottom: 24px">
                 <thead>
-                <tr>
-                    <th>Syntax</th>
-                    <th colspan="2">Example</th>
-                </tr>
+                    <tr> <th>Syntax</th> <th colspan="2">Example</th> </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><code>&{AARRGGBB}</code></td>
-                    <td>&{77FF4040}</td>
-                    <td>Coral Red (50% transparency)</td>
-                </tr>
-                <tr>
-                    <td><code>&{RRGGBB}</code></td>
-                    <td>&{FF4040}</td>
-                    <td>Coral Red (no transparency)</td>
-                </tr>
-                <tr>
-                    <td>&{ARGB}</td>
-                    <td>&{BF50}</td>
-                    <td>Orange-ish Red (75% Opacity)</td>
-                </tr><tr>
-                    <td>&{RGB}</td>
-                    <td>&{F50}</td>
-                    <td class="last_cell">Orange-ish Red (no transparency)</td>
-                </tr>
-
+                    <tr> <td><code>&{AARRGGBB}</code></td> <td>&{77FF4040}</td> <td>Coral Red (50% transparency)</td> </tr>
+                    <tr> <td><code>&{RRGGBB}</code></td>   <td>&{FF4040}</td>   <td>Coral Red (no transparency)</td>  </tr>
+                    <tr> <td><code>&{ARGB}</code></td>     <td>&{BF50}</td>     <td>Orange-ish Red (75% Opacity)</td> </tr>
+                    <tr> <td><code>&{RGB}</code></td>      <td>&{F50}</td>      <td class="last_cell">Orange-ish Red (no transparency)</td> </tr>
                 </tbody>
             </table>
             <table>
                 <thead>
-                <tr>
-                    <th>Letters</th>
-                    <th>Meaning</th>
-                    <th>Range</th>
-                </tr>
+                    <tr> <th>Letters</th> <th>Meaning</th> <th>Range</th> </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><code>AA or A</code></td>
-                    <td>Alpha (Translucency)</td>
-                    <td>00-FF or 0-F</td>
-                </tr>
-                <tr>
-                    <td><code>RR or R</code></td>
-                    <td>Red</td>
-                    <td>00-FF or 0-F</td>
-                </tr>
-                <tr>
-                    <td><code>GG or G</code></td>
-                    <td>Green</td>
-                    <td>00-FF or 0-F</td>
-                </tr>
-                <tr>
-                    <td><code>BB or B</code></td>
-                    <td>Blue</td>
-                    <td class="last_cell">00-FF or 0-F</td>
-                </tr>
-
+                    <tr> <td><code>AA or A</code></td> <td>Alpha (Translucency)</td> <td>00-FF or 0-F</td> </tr>
+                    <tr> <td><code>RR or R</code></td> <td>Red</td>   <td>00-FF or 0-F</td> </tr>
+                    <tr> <td><code>GG or G</code></td> <td>Green</td> <td>00-FF or 0-F</td> </tr>
+                    <tr> <td><code>BB or B</code></td> <td>Blue</td>  <td class="last_cell">00-FF or 0-F</td> </tr>
                 </tbody>
             </table>
-
         </div>
-
     </div>
 
     <div style="height: 500px"></div>
