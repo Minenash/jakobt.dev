@@ -75,33 +75,28 @@
 <!--    </div>-->
 
 
-    <h2>7. Profile Sections</h2>
+    <h2>7. Theming</h2>
     <p>
-        Currently the profile is only displaying info at the top right, but what if we want to put info in the other
-        corners? That's what Profile Sections are for!
-    </p>
-
-    <h3>Profile Section Options</h3>
-    <p>
-        Profile Section's x/y can be shifted, hidden when chat is open, or can be set to have the background a specific width
+        Theming allows you to customize the style of your profiles, like foreground and background color, font, scale, text shadow, and line spacing
     </p>
     <div class="note" style="width: 43%;">
-        <b>Reference:</b> <a href="#">All the Options for Profile Section</a>
+        <b>Reference:</b> <a href="#">All the Theme Options</a>
     </div>
 
     <h3>Instructions</h3>
     <p>
-        Let's add cpu, gpu, and ram usage percentages info to the TopRight corner.
+        Let's change the background color and make the text bigger, and make one of the lines use a different
+        background color for the last line.
     </p>
     <ul>
-        <li>Type <code class="code_inline">==Section:TopLeft==</code> above what we had in part 5.
-            <ul>
-                <li>This isn't strictly necessary, but it makes it more obvious what's going on</li>
-            </ul>
-        </li>
-        <li>Type <code class="code_inline">==Section:TopRight==</code> underneath what we had in part 5.</li>
-        <li>Add the cpu, gpu, and memory usage variable underneath</li>
-
+        <li>Remove the TopRight section. Why? Because the scale I use below is comically large</li>
+        <li>At the top of the profile <ul>
+            <li style="margin-bottom: 6px; margin-top: 2px;">Add <code class="code_inline">==BackgroundColor:#88880000==</code></li>
+            <li style="margin-bottom: 6px">Add <code class="code_inline">==Scale:1.5==</code></li>
+        </ul></li>
+        <li>Add <code class="code_inline">=BackgroundColor:#88008800=</code> before the last line on the TopLeft section <ul>
+            <li style="margin-top: 2px;">This one only works on v3.0.0 and above</li>
+        </ul></li>
     </ul>
 
     <div>
@@ -110,15 +105,14 @@
             <div class="code_block">
                 <b style="text-decoration: underline">profile1.txt</b><br>
                 <code>
+                    ==BackgroundColor:#88880000== <br>
+                    ==Scale:1.5== <br>
+                    <br>
                     ==Section:TopLeft== <br>
                     fps: &a{fps} <br>
                     xyz: &c{bx} &a{by} &b{bz} <br>
+                    =BackgroundColor:#88008800= <br>
                     biome: &e{biome} <br>
-                    <br>
-                    ==Section:TopRight==<br>
-                    &e{cpu}% &fcpu<br>
-                    &e{gpu}% &fgpu<br>
-                    &e{memory_used_percentage}% &fram
                 </code>
             </div>
         </div>
@@ -128,6 +122,13 @@
             <div class="result" style="background-color:forestgreen;"></div> <!-- style='background-image: url("imgs/colors.png")' -->
         </div>
     </div>
+
+
+
+
+
+
+
 
     <div class="spacer"></div>
 </div>
