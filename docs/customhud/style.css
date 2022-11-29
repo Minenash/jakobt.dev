@@ -193,6 +193,10 @@ th:last-child { border-radius: 0 10px 0 0; }
 tr:last-child td:first-child { border-radius: 0 0 0 10px; }
 .last_cell { border-radius: 0 0 10px 0; }
 
+.all_left_cells td {
+    text-align: left;
+}
+
 .left_cells td:not(:first-child){
     text-align: left;
 }
