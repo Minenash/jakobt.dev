@@ -24,11 +24,12 @@
     <li><a class="side_nav_header">Categories</a></li>
     <li><a href="#f3">ꜰʀᴏᴍ ꜰ<b class="small_num">3</b></a></li>
     <li><a href="#new" style="color: gold">✨ ɴᴇᴡ ✨</a></li>
+    <li><a href="#performance">ᴘᴇʀꜰᴏʀᴍᴀɴᴄᴇ</a></li>
     <li><a href="#misc">ᴍɪsᴄ</a></li>
     <li><a href="#position">ᴘᴏsɪᴛɪᴏɴ</a></li>
     <li><a href="#direction">ᴅɪʀᴇᴄᴛɪᴏɴ</a></li>
     <li><a href="#movement">ᴍᴏᴠᴇᴍᴇɴᴛ</a></li>
-    <li><a href="#biome_and_dimension">ʙɪᴏᴍᴇ, ᴅɪᴍᴇɴsɪᴏɴ</a></li>
+    <li><a href="#environment">ᴇɴᴠɪʀᴏɴᴍᴇɴᴛ</a></li>
     <li><a href="#entities">ᴇɴᴛɪᴛɪᴇs</a></li>
     <li><a href="#day_and_time">ᴅᴀʏ, ᴛɪᴍᴇ</a></li>
     <li><a href="#difficulty_and_light_levels">ᴅɪꜰꜰɪᴄᴜʟᴛʏ, ʟɪɢʜᴛ</a></li>
@@ -511,7 +512,7 @@
     <details>
         <summary>Variables added in 3.0.0</summary>
 
-        <h4>Misc</h4>
+        <h4>Miscellaneous</h4>
         <table>
         <thead>
         <tr>
@@ -617,8 +618,8 @@
         <tr>
             <td>{raining}</td>
             <td>If it's raining/snowing</td>
-            <td>1 (raining/snowing)<br>0 (not raining/snowing)</td>
-            <td><code>true</code> (raining/snowing)<br><code>false</code> (not raining/snowing)</td>
+            <td>1&nbsp;(raining/snowing)<br>0&nbsp;(not&nbsp;raining/snowing)</td>
+            <td><code>true</code>&nbsp;(raining/snowing)<br><code>false</code>&nbsp;(not&nbsp;raining/snowing)</td>
             <td>None</td>
         </tr>
         <tr>
@@ -712,28 +713,28 @@
                 <td>Average frame time in milliseconds</td>
                 <td>avg frame time</td>
                 <td><code>true</code></td>
-                <td>None</td>
+                <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
             </tr>
             <tr>
                 <td>{frame_ms_min}</td>
                 <td>Minimum frame time in milliseconds</td>
                 <td>min frame time</td>
                 <td><code>true</code></td>
-                <td>None</td>
+                <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
             </tr>
             <tr>
                 <td>{frame_ms_max}</td>
                 <td>Maximum frame time in milliseconds</td>
                 <td>max frame time</td>
                 <td><code>true</code></td>
-                <td>None</td>
+                <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
             </tr>
             <tr>
                 <td>{frame_ms_samples}</td>
                 <td>Number of samples used for the above 3 variables</td>
                 <td>number of samples</td>
                 <td><code>true</code></td>
-                <td>None</td>
+                <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
             </tr>
             </tbody>
         </table>
@@ -911,6 +912,65 @@
         </table>
     </details>
 
+    <h3 id="performance">Performance</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="fps">{fps}</td>
+            <td>Frames per Second</td>
+            <td>the fps</td>
+            <td><code>true</code></td>
+            <td class="rowspan last_cell" rowspan="7"><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td id="tps">{tps}</td>
+            <td>How many ticks happen every second.<br>Maxes out at 20<br> - <strong>Singleplayer Only</strong></td>
+            <td>the millisecond it takes for a tick</td>
+            <td class="rowspan_fix_right">if it can get the value<br>(aka you&#39;re in singleplayer)</td>
+        </tr>
+        <tr>
+            <td id="ms_ticks">{ms_ticks}</td>
+            <td>The time it takes for a tick in milliseconds<br> - <strong>Singleplayer Only</strong></td>
+            <td>the millisecond it takes for a tick</td>
+            <td class="rowspan_fix_right">if it can get the value<br>(aka you&#39;re in singleplayer)</td>
+        </tr>
+        <tr>
+            <td id="frame_ms_avg">{frame_ms_avg}</td>
+            <td>Average frame time in milliseconds</td>
+            <td>avg frame time</td>
+            <td class="rowspan_fix_right"><code>true</code></td>
+        </tr>
+        <tr id="frame_ms_min">
+            <td>{frame_ms_min}</td>
+            <td>Minimum frame time in milliseconds</td>
+            <td>min frame time</td>
+            <td class="rowspan_fix_right"><code>true</code></td>
+        </tr>
+        <tr id="frame_ms_max">
+            <td>{frame_ms_max}</td>
+            <td>Maximum frame time in milliseconds</td>
+            <td>max frame time</td>
+            <td class="rowspan_fix_right"><code>true</code></td>
+        </tr>
+        <tr id="frame_ms_samples">
+            <td>{frame_ms_samples}</td>
+            <td>Number of samples used for the above 3 variables</td>
+            <td>number of samples</td>
+            <td class="rowspan_fix_right"><code>true</code></td>
+        </tr>
+
+        </tbody>
+    </table>
+
     <h3 id="misc">Miscellaneous</h3>
     <table>
         <thead>
@@ -924,11 +984,46 @@
         </thead>
         <tbody>
         <tr>
-            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Stats-Variable">{stat:&lt;stat&gt;}<br><div style="white-space: nowrap">{stat:&lt;type&gt;:&lt;value&gt;}</div></a></td>
+            <td id="stat"><a href="https://github.com/Minenash/CustomHUD/wiki/Stats-Variable">{stat:&lt;stat&gt;}<br><div style="white-space: nowrap">{stat:&lt;type&gt;:&lt;value&gt;}</div></a></td>
             <td>Retrieve a stat</td>
             <td>value saved in the stat</td>
             <td>if value &gt; 0</td>
             <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a>, <a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#formatted-only-for-the-statstat-variable">Formatted</a></td>
+        </tr>
+        <tr>
+            <td id="item_icon"><a href="#">{icon:&lt;item_id&gt;}</a></td>
+            <td>Shows the given item</td>
+            <td>raw item id</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td id="texture_icon"><a href="#">{icon:&lt;texture_path&gt;}<br>{﻿icon﻿:﻿&lt;﻿path﻿&gt;﻿,﻿&lt;﻿u﻿&gt;﻿,﻿&lt;﻿v﻿&gt;﻿,﻿&lt;﻿w﻿&gt;﻿,﻿&lt;﻿h﻿&gt;﻿}</a></td>
+            <td>Shows the given texture</td>
+            <td>0</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td id="setting"><a href="#">{setting:&lt;setting&gt;}<br>{s:&lt;setting&gt;}</a></td>
+            <td>Shows the value of the specified mc setting<br>(like render distance, graphics settings, clouds, vsync, etc)</td>
+            <td>length of output (1)</td>
+            <td><code>true</code></td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
+        </tr>
+        <tr>
+            <td id="lcps">{lcps}<br>{left_click_per_second}</td>
+            <td colspan>How many times you left‑clicked in the previous second</td>
+            <td>number of left‑clicks</td>
+            <td>if the player left‑clicked in the last second</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
+        </tr>
+        <tr>
+            <td id="rcps">{rcps}<br>{right_click_per_second}</td>
+            <td>How many times you right‑clicked in the previous second</td>
+            <td>number of right‑clicks</td>
+            <td>if the player right‑clicked in the last second</td>
+            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
         </tr>
         <tr>
             <td id="version">{version}</td>
@@ -952,31 +1047,10 @@
             <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#string">String</a></td>
         </tr>
         <tr>
-            <td id="fps">{fps}</td>
-            <td>Frames per Second</td>
-            <td>the fps</td>
-            <td><code>true</code></td>
-            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
-        </tr>
-        <tr>
             <td id="particles">{p} / {particles}</td>
             <td>Number of particles visible or loaded (not sure)</td>
             <td>number of particles</td>
             <td>if more than 0 particles</td>
-            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
-        </tr>
-        <tr>
-            <td id="tps">{tps}</td>
-            <td>How many ticks happen every second.<br>Maxes out at 20<br> - <strong>Singleplayer Only</strong></td>
-            <td>the millisecond it takes for a tick</td>
-            <td>if it can get the value<br>(aka you&#39;re in singleplayer)</td>
-            <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
-        </tr>
-        <tr>
-            <td id="ms_ticks">{ms_ticks}</td>
-            <td>The time it takes for a tick in milliseconds<br> - <strong>Singleplayer Only</strong></td>
-            <td>the millisecond it takes for a tick</td>
-            <td>if it can get the value<br>(aka you&#39;re in singleplayer)</td>
             <td><a href="https://github.com/Minenash/CustomHUD/wiki/Variable-Flags#precision--scale">Precision &amp; Scale</a></td>
         </tr>
         <tr>
@@ -1297,7 +1371,7 @@
         </tbody>
     </table>
 
-    <h3 id="biome_and_dimension">Biome and Dimension</h3>
+    <h3 id="environment">Environment</h3>
     <table>
         <thead>
         <tr>
@@ -1329,6 +1403,34 @@
             <td class="rowspan_fix_right">The id of the dimension the player is in.<br><i>Ex: “minecraft:overworld”, “minecraft:the_nether”</i></td>
         </tr>
         </tbody>
+        <tr>
+            <td id="raining">{raining}</td>
+            <td>If it's raining/snowing</td>
+            <td>1&nbsp;(raining/snowing)<br>0&nbsp;(not&nbsp;raining/snowing)</td>
+            <td><code>true</code>&nbsp;(raining/snowing)<br><code>false</code>&nbsp;(not&nbsp;raining/snowing)</td>
+            <td>None</td>
+        </tr>
+        <tr id="thundering">
+            <td>{thundering}</td>
+            <td>If there's a thunderstorm</td>
+            <td>1 (thundering)<br>0 (not thundering)</td>
+            <td><code>true</code> (thundering)<br><code>false</code> (not thundering)</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td id="singleplayer">{singleplayer}</td>
+            <td>If the player is in a singleplayer world</td>
+            <td>1 (in singleplayer)<br>0 (in multiplayer)</td>
+            <td><code>true</code> (in singleplayer)<br><code>false</code> (in multiplayer)</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td id="multiplayer">{multiplayer}</td>
+            <td>If the player is in a multiplayer server</td>
+            <td>1 (in multiplayer)<br>0 (in singleplayer)</td>
+            <td><code>true</code> (in multiplayer)<br><code>false</code> (in singleplayer)</td>
+            <td>None</td>
+        </tr>
     </table>
 
     <h3 id="entities">Entities</h3>
