@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8>
+    <title>Stats - CustomHud</title>
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport>
+    <meta content="The Home of Terrible Projects" name=description>
+    <link rel="icon" type="image/png" href="../../favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+    <style>html {background-color:#f4f5f7} body {display:none}</style>
+</head>
+<body>
+
+<ul class="nav" style="position: sticky; top: 0; z-index: 1;">
+    <li><a class="logo"><b>CustomHud Docs</b></a></li>
+    <li><div class="separator"></div></li>
+    <li><a href="#top">Getting Started</a></li>
+    <li><a href="../variables.html">Variables</a></li>
+    <li><a href="https://github.com/Minenash/CustomHUD/wiki/Conditonals">Conditionals</a></li>
+    <li><a href="../references.html" class="active">References</a></li>
+</ul>
+
+<div class="version">Written for v3.0.0</div>
+
+<ul class="nav side_nav">
+    <li><a class="side_nav_header">General</a></li>
+    <li><a href="profile_sections.html">Profile Sections</a></li>
+    <li><a href="theming.html">Theming</a></li>
+    <li><a href="variable_flags.html">Variable Flags</a></li>
+    <li><a href="colors.html">Colors</a></li>
+    <li><a style="height:8px; width: 0"></a></li>
+    <li><a class="side_nav_header">Special Variables</a></li>
+    <li><a href="stats.html">Stats</a></li>
+    <li><a href="real_time.html">Real Time</a></li>
+    <li><a href="item_slots.html">Item Slots</a></li>
+    <li><a href="icons.html">Icons</a></li>
+    <li><a href="#">MC Settings</a></li>
+</ul>
+
+<div id="top" class="content">
+    <br>
+
+    <h2>Statistics Variable</h2>
+
+    <h3>Formatters</h3>
+    <p>
+        When the stat variable uses the <code class="code_inline">-f</code> &nbsp;variable flag, it uses the formatter
+    </p>
+    <b>Syntax: <code class="code_inline">{stat:&lt;stat&gt;}</code></b>
+    <br><br>
+
+
+    <h3>All Available (Vanilla) Settings</h3>
+
+    <h4>Miscellaneous</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Setting</th>
+                <th>Description</th>
+                <th>Number Value</th>
+                <th>Boolean Value</th>
+                <th>Flags</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>modelPart_&lt;part&gt;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>autoSuggestions</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>enableVsync</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>entityShadows</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>realmsNotifications</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>reducedDebugInfo</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fullscreen</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>bobView</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>darkMojangStudiosBackground</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>hideLightningFlashes</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fov</td>
+                <td>Decimal</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>screenEffectScale</td>
+                <td>Decimal (0-1)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fovEffectScale</td>
+                <td>Decimal (0-1)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>darknessEffectScale</td>
+                <td>Decimal (0-1)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>gamma</td>
+                <td>Decimal (0-1)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>renderDistance</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>simulationDistance</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>entityDistanceScaling</td>
+                <td>Decimal (0-1)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>guiScale</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>particles</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>maxFps</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>graphicsMode</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ao</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>prioritizeChunkUpdates</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>biomeBlendRadius</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>renderClouds</td>
+                <td>String</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>lastServer</td>
+                <td>String</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>hideServerAddress</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>advancedItemTooltips</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>pauseOnLostFocus</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>overrideWidth</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>overrideHeight</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>heldItemTooltips</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>mipmapLevels</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>useNativeTransport</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>mainHand</td>
+                <td>String</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>attackIndicator</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>tutorialStep</td>
+                <td>String</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>glDebugVerbosity</td>
+                <td>Integer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>skipMultiplayerWarning</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>skipRealms32bitWarning</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>hideMatchedNames</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>joinedFirstServer</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>hideBundleTutorial</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>syncChunkWrites</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>showAutosaveIndicator</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>allowServerListing</td>
+                <td>Boolean</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Controls</h4>
+    <table>
+        <thead>
+        <tr>
+            <th>Setting</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>key_key.&lt;keybind&gt;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>autoJump</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>discrete_mouse_scroll</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>invertYMouse</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>touchscreen</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>toggleCrouch</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>toggleSprint</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mouseSensitivity</td>
+            <td>Decimal (0-1?)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mouseWheelSensitivity</td>
+            <td>Decimal (0-1?)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>rawMouseInput</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h4>Language, Text, and Sound</h4>
+    <table>
+        <thead>
+        <tr>
+            <th>Setting</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>soundCategory_&lt;sound_category&gt;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>forceUnicodeFont</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>textBackgroundOpacity</td>
+            <td>Decimal (0-1)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>backgroundForChatOnly</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>showSubtitles</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>directionalAudio</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>lang</td>
+            <td>Strings</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>soundDevice</td>
+            <td>String</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>narrator</td>
+            <td>Integer</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h4>Chat Related</h4>
+    <table>
+        <thead>
+        <tr>
+            <th>Setting</th>
+            <th>Description</th>
+            <th>Number Value</th>
+            <th>Boolean Value</th>
+            <th>Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>chatColors</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatLinks</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatLinksPrompt</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatVisibility</td>
+            <td>Integer</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatOpacity</td>
+            <td>Decimal (0-1)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatLineSpacing</td>
+            <td>Decimal</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatHeightFocused</td>
+            <td>Decimal (0-1)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatDelay</td>
+            <td>Decimal</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatHeightUnfocused</td>
+            <td>Decimal (0-1)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatScale</td>
+            <td>Decimal</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatWidth</td>
+            <td>Decimal</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chatPreview</td>
+            <td>Integer</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>onlyShowSecureChat</td>
+            <td>Boolean</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
