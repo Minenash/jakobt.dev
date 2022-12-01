@@ -65,330 +65,330 @@
         <tbody>
             <tr>
                 <td>modelPart_&lt;part&gt;</td>
-                <td></td>
-                <td></td>
+                <td>If the player's &lt;part&gt; is visible</td>
+                <td>Boolean</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>autoSuggestions</td>
+                <td>Whether brigadier's command suggestion UI should always be shown, instead of just when pressing tab </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>enableVsync</td>
+                <td>Whether v-sync (vertical synchronization) is enabled </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>entityShadows</td>
+                <td>Whether to display entity shadows </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>realmsNotifications</td>
+                <td>Whether Realms invites are alerted on the main menu </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>reducedDebugInfo</td>
+                <td>Whether to reduce the information shown on the Debug screen</td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>fullscreen</td>
+                <td>Whether the game attempts to go fullscreen at startup </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>bobView</td>
+                <td>Whether or not the camera bobs up and down as the player walks </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>darkMojangStudiosBackground</td>
+                <td>Whether the Mojang Studios loading screen will appear monochrome </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>hideLightningFlashes</td>
+                <td>Hide lightning flashes (visual effect) </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>fov</td>
-                <td>Decimal</td>
-                <td></td>
-                <td></td>
+                <td>How large the field of view is (in degrees)</td>
+                <td>Integer</td>
+                <td>degrees = 40 * value + 70</td>
                 <td></td>
             </tr>
             <tr>
                 <td>screenEffectScale</td>
+                <td>How intense the distortion effects of Nausea and nether portals are</td>
                 <td>Decimal (0-1)</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>fovEffectScale</td>
+                <td>How much the field of view changes when sprinting, having Speed or Slowness etc.</td>
                 <td>Decimal (0-1)</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>darknessEffectScale</td>
+                <td>How much the Darkness effect pulses</td>
                 <td>Decimal (0-1)</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>gamma</td>
+                <td>Brightness</td>
                 <td>Decimal (0-1)</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>renderDistance</td>
+                <td>The render distance in the chunk radius from the player </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>simulationDistance</td>
+                <td>The simulation distance in the chunk radius from the player </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>entityDistanceScaling</td>
-                <td>Decimal (0-1)</td>
-                <td></td>
+                <td>The maximum distance from the player that entities render </td>
+                <td>Decimal (0.5-5.0)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>guiScale</td>
+                <td>Size of interfaces </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>particles</td>
-                <td>Integer</td>
-                <td></td>
+                <td>Amount of particles (such as rain, potion effects, etc.) </td>
+                <td>Integer (All, Decreased, Minimal)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>maxFps</td>
+                <td>The maximum framerate </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>graphicsMode</td>
-                <td>Integer</td>
-                <td></td>
+                <td>Which graphics mode is selected</td>
+                <td>Integer (Fast, Fancy, Fabulous)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>ao</td>
-                <td>Integer</td>
-                <td></td>
+                <td>Smooth lighting</td>
+                <td>Integer (Off, Minimum, Maximum)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>prioritizeChunkUpdates</td>
-                <td>Integer</td>
-                <td></td>
+                <td>Chunk section update strategy </td>
+                <td>Integer (Threaded, Semi Blocking, Full Blocking)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>biomeBlendRadius</td>
+                <td>Radius for which biome blending should happen </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>renderClouds</td>
-                <td>String</td>
-                <td></td>
+                <td>Whether to display clouds</td>
+                <td>String (true/false/fast)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>lastServer</td>
+                <td>Address of last server used with Direct Connection </td>
                 <td>String</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>hideServerAddress</td>
-                <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>advancedItemTooltips</td>
+                <td>Whether hovering over items in the inventory shows its ID and durability; toggled by pressing <kbd>F3</kbd> + <kbd>H</kbd></td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>pauseOnLostFocus</td>
+                <td>Whether switching out of Minecraft without pressing Esc or opening an in-game interface automatically pauses the game; toggled by pressing <kbd>F3</kbd> + <kbd>P</kbd></td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>overrideWidth</td>
+                <td>Width to open Minecraft with in pixels (0 means default to the Minecraft settings); <b>no in-game control</b> </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>overrideHeight</td>
+                <td>Height to open Minecraft with in pixels (0 means default to the Minecraft settings); <b>no in-game control</b> </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>heldItemTooltips</td>
+                <td>Whether switching between items shows the name of the item; <b>no in-game control</b> </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>mipmapLevels</td>
+                <td>Amount by which distant textures are smoothed </td>
                 <td>Integer</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>useNativeTransport</td>
+                <td>Whether to use a Netty EpollSocketChannel for connections to servers instead of a NioSocketChannel (only applies if EPOLL is available on the user's system) <b>CHECK INGAME</b></td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>mainHand</td>
+                <td>Whether the main hand appears as left or right </td>
                 <td>String</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>attackIndicator</td>
-                <td>Integer</td>
-                <td></td>
+                <td>When hitting, how the attack indicator is shown on screen </td>
+                <td>Integer (Off, Crosshair, Hotbar)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>tutorialStep</td>
+                <td>Next stage of tutorial hints to display </td>
                 <td>String</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>glDebugVerbosity</td>
-                <td>Integer</td>
-                <td></td>
+                <td>LWJGL log info level (only on some machines) <b>CHECK SETTINGS</b></td>
+                <td>Integer (none, high, medium, low, notification)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>skipMultiplayerWarning</td>
+                <td>Whether to skip the legal disclaimer when entering the multiplayer screen </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>skipRealms32bitWarning</td>
+                <td>Whether to skip the 32-bit environment warning when entering the Realms screen</td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>hideMatchedNames</td>
+                <td>Some servers send chat messages in non-standard formats. With this option on, the game will attempt to apply chat hiding anyway by matching the text in messages. </td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>joinedFirstServer</td>
+                <td>Whether the player has joined a server before. If false, the Social Interactions tutorial hint will appear when joining a server <b>not shown</b></td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>hideBundleTutorial</td>
+                <td>Whether the player has seen the bundle tutorial hint when trying to use a bundle. <b>Not shown</b></td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>syncChunkWrites</td>
-                <td>Boolean</td>
-                <td></td>
+                <td>Whether to open region files in synchronous mode <b>Not shown</b></td>
+                <td>Boolean (T: Windows, F: Other)</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>showAutosaveIndicator</td>
+                <td>Whether to show autosave indicator on the right-bottom of the screen <b>Check mc</b></td>
                 <td>Boolean</td>
-                <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>allowServerListing</td>
+                <td>Whether to allow the player to be shown in the player list shown by severs in the multiplayer screen </td>
                 <td>Boolean</td>
                 <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fullscreenResolution</td>
+                <td>The resolution of the game when in fullscreen mode</td>
+                <td>String (&lt;width&gt;x&lt;height&gt;@&lt;refresh rate&gt;:&lt;color bits&gt;)</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -409,71 +409,71 @@
         <tbody>
         <tr>
             <td>key_key.&lt;keybind&gt;</td>
-            <td></td>
-            <td></td>
+            <td>The key bound for &lt;keybind&gt;</td>
+            <td>String</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>autoJump</td>
+            <td>Whether auto-jump is enabled</td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>discrete_mouse_scroll</td>
+            <td>Whether to ignore scrolling set by operating system </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>invertYMouse</td>
+            <td>Whether mouse is inverted or not </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>touchscreen</td>
+            <td>If Directional Audio is enabled </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>toggleCrouch</td>
+            <td>Whether the crouching key is a toggle instead of the standard hold to crouch </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>toggleSprint</td>
+            <td>Whether the sprinting key is a toggle instead of the standard hold to sprint </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>mouseSensitivity</td>
+            <td>How much a mouse movement changes the position of the camera </td>
             <td>Decimal (0-1?)</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>mouseWheelSensitivity</td>
-            <td>Decimal (0-1?)</td>
-            <td></td>
+            <td>The sensitivity of the mouse wheel</td>
+            <td>Decimal (1-10)</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>rawMouseInput</td>
+            <td>Whether to ignore the mouse acceleration set by the operating system</td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -494,64 +494,64 @@
         <tbody>
         <tr>
             <td>soundCategory_&lt;sound_category&gt;</td>
-            <td></td>
-            <td></td>
+            <td>The volume of the category</td>
+            <td>Decimal (0-1)</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>forceUnicodeFont</td>
+            <td>Whether the Unicode font should be instead of the normal font </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>textBackgroundOpacity</td>
+            <td>Opacity of text background </td>
             <td>Decimal (0-1)</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>backgroundForChatOnly</td>
+            <td>Toggles if the background is only in chat or if it's everywhere </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>showSubtitles</td>
+            <td>Whether to show subtitles</td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>directionalAudio</td>
+            <td>Whether Directional Audio is enabled </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>lang</td>
+            <td><b>To break out</b></td>
             <td>Strings</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>soundDevice</td>
+            <td>The Sound device to output the audio to </td>
             <td>String</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>narrator</td>
-            <td>Integer</td>
-            <td></td>
+            <td>The mode the narrator is in</td>
+            <td>Integer (Off, All, Chat, System)</td>
             <td></td>
             <td></td>
         </tr>
@@ -572,95 +572,124 @@
         <tbody>
         <tr>
             <td>chatColors</td>
+            <td>Whether colors in chat are allowed </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatLinks</td>
+            <td>Whether links show as links or just text in the chat</td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatLinksPrompt</td>
+            <td>Whether clicking on links in chat needs confirmation before opening them </td>
             <td>Boolean</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatVisibility</td>
-            <td>Integer</td>
-            <td></td>
+            <td>What is seen in chat </td>
+            <td>Integer (Shown, Commands only, Hidden)</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatOpacity</td>
+            <td>Opacity of the chat </td>
             <td>Decimal (0-1)</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatLineSpacing</td>
-            <td>Decimal</td>
-            <td></td>
+            <td>Spacing between text in chat </td>
+            <td>Decimal (0-1)</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatHeightFocused</td>
+            <td>How tall chat is when focused (<kbd>T</kbd>)</td>
             <td>Decimal (0-1)</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatDelay</td>
+            <td>How much delay there is between text </td>
             <td>Decimal</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatHeightUnfocused</td>
+            <td>How tall chat is when not focused</td>
             <td>Decimal (0-1)</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatScale</td>
+            <td>The scale/size of the text in the chat </td>
             <td>Decimal</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatWidth</td>
+            <td>How wide chat is</td>
             <td>Decimal</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>chatPreview</td>
-            <td>Integer</td>
-            <td></td>
+            <td>If chat preview is enabled, and when it shows</td>
+            <td><b>CHECK</b> Integer (off, onsend, live)</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>onlyShowSecureChat</td>
+            <td>Whether to only show chat messages that are properly signed</td>
             <td>Boolean</td>
             <td></td>
             <td></td>
-            <td></td>
         </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead> <tr> <th>Category</th> <th>Description</th> </tr> </thead>
+        <tbody>
+            <tr> <td>master</td> <td>The volume of all sounds </td> </tr>
+            <tr> <td>music</td> <td>The volume of gameplay music </td> </tr>
+            <tr> <td>record</td> <td>The volume of music/sounds from Jukeboxes and Note Blocks </td> </tr>
+            <tr> <td>weather</td> <td>The volume of rain and thunder </td> </tr>
+            <tr> <td>block</td> <td>The volume of blocks </td> </tr>
+            <tr> <td>hostile</td> <td>The volume of hostile and neutral mobs </td> </tr>
+            <tr> <td>neutral</td> <td>The volume of passive mobs </td> </tr>
+            <tr> <td>player</td> <td>The volume of players </td> </tr>
+            <tr> <td>ambient</td> <td>The volume of cave sounds and fireworks </td> </tr>
+            <tr> <td>voice</td> <td>The volume of voices </td> </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead> <tr> <th>Modal Part</th> </tr> </thead>
+        <tbody>
+        <tr> <td>cape</td> </tr>
+        <tr> <td>hat</td> </tr>
+        <tr> <td>jacket</td> </tr>
+        <tr> <td>left_sleeve</td> </tr>
+        <tr> <td>right_sleeve</td> </tr>
+        <tr> <td>left_pants_leg</td> </tr>
+        <tr> <td>right_pants_leg</td> </tr>
         </tbody>
     </table>
 
